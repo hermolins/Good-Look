@@ -1,7 +1,51 @@
 /* Estilos para todo el proyecto */
-*{
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+
+
+header, main, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilos del header */
+header {
+    height: 110px;
+    width: 100%;
+    margin: 0 ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+    width: auto;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    overflow: hidden;
+}
+
+header nav ul li {
+    margin-right: 10px;
 }
 header nav ul li a {
     display: inline;
@@ -11,10 +55,49 @@ header nav ul li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+header nav ul li a:hover {
+    background-color: #555;
+}
 
 body {
     background-color: lightgray;
     color:black;
+}
+/* Estilos del main */
+main {
+    /* Establece un ancho máximo para el contenido */
+   margin: 0 auto; /* Centra el contenido horizontalmente */
+   margin-top: 120px;
+   padding: 20px; /* Agrega espacio alrededor del contenido */
+   box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+   background-color: lightgray; /* Color de fondo*/
+}
+h1 {
+   color: #333;
+   text-align: center;
+   padding: 20px;
+}
+h2 {
+   text-align: center;
+   color: red   
+}
+h3 {
+   text-align: center;
+   font-size: 1.5rem;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   padding: 1rem;
+}
+p {
+   line-height: 2;
+   text-align: center;
+   padding: 2rem;
+}
+.aviso {
+   font-family: sans-serif;
+   font-style: oblique;
+   margin: 2rem;
+   padding: 2rem;
+   border: 1rem solid #cc3232;
 }
 
 .contenedor-centrado {
@@ -84,7 +167,9 @@ form {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
-
+th.align-right {
+    text-align: right;
+}
 
 table {
     max-width: 90%;
@@ -139,7 +224,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-a {
+.tabla {
     padding: 8px;
     margin:4px;
     background-color: gray;
@@ -152,8 +237,112 @@ a {
     font-weight: 600;
 }
 
-a:hover {
+.tabla:hover {
     background-color: #0c6fe0;
     border: 1px white solid;
     color: white;
+}
+/* Estilos del footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    
+}
+
+footer ul {
+    list-style: none;
+    padding: 20px;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+#botonpadre {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#botones {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#resumen {
+    width: 86px;
+}
+
+#borrarSelect {
+    width: 86px;
+}
+/* Media Queries */
+@media only screen and (max-width: 800px) {
+    /* Ajustes para dispositivos con un ancho máximo de 800px */
+    header {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    h2 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* Ajustes para dispositivos con un ancho máximo de 400px */
+    .imginicio {
+        max-width: 100%;
+    }
+    footer {
+        padding: 5% 1%;
+        
+    }
+
+    footer ul li {
+        margin-bottom: 1%;
+    }
+}
+/* Estilos generales para dispositivos grandes */
+body {
+    font-size: 16px;
+}
+/* Breakpoints agragados*/
+
+/* Breakpoint para dispositivos medianos */
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+/* Breakpoint para dispositivos pequeños */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    h2 {
+        margin-top: 20px;
+    }
+}
+
+/* Breakpoint para dispositivos muy pequeños */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+    h2 {
+        margin-top: 20px;
+    }
 }
